@@ -7,11 +7,12 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ## Pull Request Process
 
-1. Ensure that your Pull Request title provides a meaningful description of the changes you have made
-2. Ensure that your Pull request description provides the details of these changes and why you made them
-3. Ensure that the [README.md](README.md) has been updated to reflect your changes
-4. Ensure that the ShellCheck action (which should run automatically against your PR) doesn't report any errors. Correct any errors that occur.
-5. Wait for one of the organization admins to review (and hopefully approve) your PR. Please be patient - this isn't our full-time job!
+1. Ensure that your Pull Request title provides a meaningful description of the changes you have made.
+2. Ensure that your Pull request description provides the details of these changes and why you made them.
+3. Ensure that the [README.md](README.md) has been updated to reflect your changes.
+4. If you've created any new hooks, add them to the `additional_files` variable in [the Shellcheck Action](.github/workflows/ShellCheck.yml). This is necessary since the hooks don't end in a shell extension.   
+5. Ensure that the ShellCheck action (which should run automatically against your PR) doesn't report any errors. Correct any errors that occur.
+6. Wait for one of the organization admins to review (and hopefully approve) your PR. Please be patient - this isn't our full-time job!
 
 ## Code of Conduct
 
