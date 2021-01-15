@@ -13,3 +13,5 @@ jobs:
     steps:
       - name: ShellCheck
         uses: ludeeus/action-shellcheck@1.0.0
+        with:
+          additional_files: 'post-checkout post-merge'
