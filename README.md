@@ -29,7 +29,10 @@ This hook is also adapted from [ stefansundin/git-bundle-hook](https://gist.gith
 These githooks are designed to be relatively robust, however they do expect that .env.development, composer.json, and composer.lock exist. They also assume that the .gitignore for the target repository has been configured to ignore the .env.old file, as that's not something that most developers will want to track.
 
 ## Security
-If you discover a security vulnerability within this set of githooks, please send an email to [webmaster@vutc.com](mailto:webmaster@vutc.com). Please do not present security concerns publicly. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this set of githooks, please send an email to [webmaster@vutc.com](mailto:webmaster@vutc.com). Please do not present security concerns publicly. All security vulnerabilities will be promptly addressed. See our full [security policy](SECURITY.md) for details.
+
+## Contributing
+See our [contribution policy](CONTRIBUTING.md) for details on contributing to this repository.
 
 ## License
 vutechcrew/githooks is licensed under [The GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html).
