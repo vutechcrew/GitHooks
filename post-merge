@@ -1,0 +1,28 @@
+#!/bin/sh
+# On merge (after pulling changes), moves the .env to .env.old (in case changes were made), then copies the
+# .env.development to .env. Also checks for changes to composer.json or composer.lock and runs composer automatically
+# if changes were made
+
+oldRef=$1
+newRef=$2
+
+changed() {
+  git diff --name-only "$oldRef" "$newRef" | grep "^$1" > /dev/null 2>&1
+}
+
+if changed '.env.development'; then
+    echo "Environment Variables Changed, adjusting .env files"
+    if [ -f .env ]; then
+        echo "Moving .env to .env.old"
+        mv .env .env.old
+    fi
+    echo "Moving .env.development to .env"
+    cp .env.development .env
+fi
+
+#Runs Composer Install automatically if composer assets changed
+
+if changed 'composer.*'; then
+    echo "Composer dependencies changed, running Composer Install"
+    composer install
+fi
